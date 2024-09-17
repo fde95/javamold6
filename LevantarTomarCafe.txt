@@ -1,0 +1,42 @@
+Var
+   acordado : lógico
+   vestimenta : lógico
+   cafePreparado : lógico
+   comFome : lógico
+   alimentado : lógico
+
+Inicio
+   // Etapa 1: Acordar
+   escreva("Você está acordado?")
+   leia(acordado)
+   
+   se acordado = verdadeiro então
+      // Etapa 2: Levantar da cama
+      escreva("Levantar da cama")
+      
+      // Etapa 3: Vestir-se
+      escreva("Você está vestido?")
+      leia(vestimenta)
+      
+      se vestimenta = falso então
+         escreva("Colocar roupa")
+         vestimenta <- verdadeiro
+      fimse
+      
+      // Etapa 4: Preparar o café
+      escreva("Preparar o café")
+      cafePreparado <- verdadeiro
+      
+      // Etapa 5: Verificar se está com fome
+      escreva("Você está com fome?")
+      leia(comFome)
+      
+      se comFome = verdadeiro e cafePreparado = verdadeiro então
+         // Etapa 6: Tomar o café da manhã
+         escreva("Tomar o café da manhã")
+         alimentado <- verdadeiro
+      fimse
+      
+   senão
+      escreva("Voltar a dormir")
+   fimse
